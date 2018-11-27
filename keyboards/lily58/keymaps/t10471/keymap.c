@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 [_LOWER] = LAYOUT( \
-  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12, \
+  KC_F1,  KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12, \
   KC_GRV, KC_EXLM, KC_AT,    KC_HASH, KC_DLR,  KC_PERC,                   KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_TILD, \
   _______, _______, _______, _______, _______, _______,                   XXXXXXX, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, \
   _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS, \
@@ -64,13 +64,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /* RAISE
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  |      |      |      |      |      |                    |      |      |      |      |      |      |
+ * | ESC  |      |      | ACL0 | ACL1 | ACL2 |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |      | GUI  | BTN1 | BTN2 | BTN3 |                    | WLEFT| WDOWN| WUP  |WRIGHT|      |      |
+ * | Tab  |      |      | BTN1 | BTN2 | BTN3 |                    | WLEFT| WDOWN| WUP  |WRIGHT|      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LShift|      | Shift|      | BTN4 | BTN5 |-------.    ,-------| MLEFT| MDOWN|  MUP |MRIGHT|      |      |
+ * |LShift|   A  |      |      | BTN4 | BTN5 |-------.    ,-------| MLEFT| MDOWN| MUP  |MRIGHT|      |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
- * |LCTRL |      |      | ACL0 | ACL1 | ACL2 |-------|    |-------| Left | Down |  Up  |Right |      |      |
+ * |LCTRL |   Z  |   X  |   C  |   V  |   B  |-------|    |-------| Left | Down |  Up  |Right |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI |LOWER | /Space  /       \Space \  |RAISE |Enter |KANAT |
  *                   |      |      |      |/       /         \      \ |      |      |      |
@@ -78,10 +78,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
 [_RAISE] = LAYOUT( \
-  KC_ESC,   _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, \
-  KC_TAB,   _______, KC_LGUI, KC_BTN1, KC_BTN2, KC_BTN3,                   _______, _______, _______, _______, _______, _______, \
-  KC_LSFT,  _______, KC_LSFT, _______, KC_BTN4, KC_BTN5,                   KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______, _______, \
-  KC_LCTRL, _______, _______, KC_ACL0, KC_ACL1, KC_ACL2, _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______, \
+  KC_ESC,   _______, _______, KC_ACL0, KC_ACL1, KC_ACL2,                   _______, _______, _______, _______, _______, _______, \
+  KC_TAB,   _______, _______, KC_BTN1, KC_BTN2, KC_BTN3,                   _______, _______, _______, _______, _______, _______, \
+  KC_LSFT,  KC_A,    _______, _______, KC_BTN4, KC_BTN5,                   KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______, _______, \
+  KC_LCTRL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    _______, _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______, \
                               KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_BSPC, KANAT  \
 ),
 
